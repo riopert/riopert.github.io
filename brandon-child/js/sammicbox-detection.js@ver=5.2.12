@@ -1,0 +1,19 @@
+(function($){
+
+  "use strict";	
+
+  var isSammicBox = window.navigator && window.navigator.userAgent && window.navigator.userAgent.indexOf('sammicbox') > -1;
+
+  if (!isSammicBox) return;
+
+  $('#Header, #Footer, #mfn-rev-slider').remove();
+
+  $('body').addClass('sammicbox');
+	
+  $('#Wrapper').on('click', 'a:not([href*="sous-vide.cooking"],[href^="/"],[href*=sammic])', function(e) {
+    e.preventDefault();
+  });
+
+  $('#Wrapper a:not([href*="sous-vide.cooking"],[href^="/"],[href*="sammic"])').css("color","inherit");
+
+})(jQuery);

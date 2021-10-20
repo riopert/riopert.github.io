@@ -1,0 +1,313 @@
+/*
+Theme Name: Brandon Child
+Version: 1.0
+Description: A child theme of Brandon
+Template: brandon
+*/
+
+@import url("../brandon/style.css");
+
+:root {
+  --color-primary: #CF152C; /* social icon, link, menu hover */
+  --color-primary-shadow: #ac3d35; /* link hover */
+  --color-primary-light: #eed3d3; /* social icon hover */
+  --color-secondary: #53302e; /* footer heading */
+  --color-secondary-light: #937a79; /* footer icon */
+  --color-text: #2e2e2e;
+  --color-text-shadow: #444444;
+  --color-text-medium: #6b6b6b; /* breadcrumbs, menu link */
+  --color-grey-bg: #f3f2f0;
+}
+
+/* MEDIDAS EXACTAS DEL SAMMICBOX */
+@media only screen and (height:688px) and (width:1280px) and (orientation: landscape){
+  body {
+    padding-top: 0;
+  }
+  body #Wrapper {
+    width: 100%;
+  }
+  body #Header,
+  body #mfn-rev-slider,
+  body #Footer,
+  body .column_accordion + .column_feature_box, /* ocultar la descarga del catálogo de la home */
+  body .column_call_to_action /* ocultar la descarga del PDF de tiempos */
+  {
+    display: none;
+  }
+}
+
+body.sammicbox {
+  padding-top: 0;
+}
+body.sammicbox #Wrapper {
+  width: 100%;
+}
+body.sammicbox #Header,
+body.sammicbox #mfn-rev-slider,
+body.sammicbox #Footer,
+body.sammicbox .column_accordion + .column_feature_box, /* ocultar la descarga del catálogo de la home */
+body.sammicbox .column_call_to_action /* ocultar la descarga del PDF de tiempos */
+{
+  display: none;
+}
+
+#Header .logo {
+  margin-bottom: 70px;
+}
+
+/* LOGO PEQUEÑO PARA MOVIL */
+@media only screen and (max-width: 480px) {
+  #Header a#logo {
+    padding: 12px 10px !important;
+  }
+  #Header a#logo img {
+    height: 40px;
+  }
+}
+
+#Header:after {
+  background: none;
+  bottom: 0;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+#Header div.social li a {
+  width: 28px;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 767px) 
+{
+  #Header div.social {
+    position: absolute;
+    top: 15px;
+    left: 45vmin;
+    right: inherit;
+    bottom: inherit;
+    text-align: left;
+    margin: 0;
+    display: inline-block;
+  }
+
+  #Header div.social ul {
+    display: inline-block;
+  }
+
+  #Header div.social li a {
+    width: 16px;
+    font-size: 14px;
+  }
+  
+  #Header a.responsive-menu-toggle {
+    top: 15px !important;
+  }
+}
+
+#Subheader {
+  position: relative;
+  background-size: cover;
+  background-image: url("images/00-banner-smartvide-pulpo.jpg");
+  box-shadow: inset 0 -3px 5px rgba(0,0,0,0.2);
+}
+
+#Subheader .title {
+  color: transparent !important;
+  font-weight: 700;
+  background-color: #cf142c;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  text-shadow: 0px 2px 1px rgba(255,255,255,0.2);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+#Subheader ul.breadcrumbs li, #Subheader ul.breadcrumbs li a {
+  color: var(--color-text) !important;
+}
+
+#Subheader ul.breadcrumbs li span:not(:last-child) {
+  margin-right: 10px;
+}
+
+.blockquote .text {
+  font-family: "Open Sans", Arial, Tahoma, sans-serif;
+  font-style: italic;
+}
+
+h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
+  font-weight: 300;
+}
+
+.posts_wrapper .post_wrapper h4 {
+  font-weight: 400 !important;
+}
+
+.section.dark .accordion .question, .section.dark .accordion .question h5, .section.dark .accordion .answer {
+color: #fff;
+}
+
+
+.the_content h1 {
+  margin-bottom: 15px;
+}
+
+
+.timeline_items a {
+  font-weight: bold;
+}
+
+.quick_form .wpcf7 span.wpcf7-form-control-wrap {
+  width: 100%;
+  margin-bottom: 1em;
+}
+.quick_form .wpcf7 span.ajax-loader {
+  width: 16px;
+  vertical-align: middle;
+}
+
+/*---Hide reCaptcha v3 visible seal---*/
+.grecaptcha-badge {
+  opacity:0 !important;
+}
+
+@media only screen and (min-width: 768px) 
+{
+  .section.justify-center .items_group {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+/* ARTICLE BOX: RECETAS, GUIAS: Para que la imagen cubra el box completo */
+.column.one-second.column_article_box div.photo {
+  overflow: hidden;
+}
+#Content .column.one-second.column_article_box div.photo img.scale-with-grid {
+  height: 100%;
+  max-width:  inherit;
+}
+
+
+/* POST PHOTO: 100% DE ANCHURA */
+.post_photo .photo_wrapper img.wp-post-image {
+  width: 100%;
+}
+
+
+/* SECTION WITH INFO BOX (HOME) */
+.section.section-no-margin .section_wrapper {
+  margin: 0;
+  width: 100% !important;
+}
+.section.section-no-margin .section_wrapper .column {
+  margin: 0;
+  min-height: 1px;
+}
+.section.section-no-margin .section_wrapper .one-second.column {
+  width: 50%;
+}
+
+
+.section.bg-dark {
+  background: rgba(0,0,0,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 76%, rgba(71,71,71,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0,0,0,1)), color-stop(76%, rgba(0,0,0,1)), color-stop(100%, rgba(71,71,71,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 76%, rgba(71,71,71,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 76%, rgba(71,71,71,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 76%, rgba(71,71,71,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 76%, rgba(71,71,71,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#474747', GradientType=1 );  
+}
+
+a.button, input[type="reset"], input[type="button"] {
+  border: 1px solid var(--color-primary);
+}
+
+a.button:after, a.tp-button:after, button:after, input[type="submit"]:after, input[type="reset"]:after, input[type="button"]:after {
+  display: none;
+}
+
+
+.sub-menu .menu-item.current-menu-item a, .sub-menu .menu-item.current-page-ancestor a {
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) 
+{
+  .menu-item.current-menu-item a, .menu-item.current-menu-ancestor a, .menu-item.current-page-ancestor a {
+    border-bottom: 2px solid var(--color-secondary);
+  }
+}
+
+
+/* FAQs */
+
+.faq .question > h5 {
+  text-transform: none;
+}
+
+.faq .question .answer > p.question {
+  color: var(--color-secondary);
+  font-family: Raleway, Arial, Tahoma, sans-serif;
+  font-weight: 300;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--color-secondary-light);
+}
+
+.faq h3 {
+  text-align: center;
+}
+
+/* ingredientes LIST */
+.the_content_wrapper ul li {
+  list-style: none;
+}
+
+.the_content_wrapper ul li:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  color: var(--color-secondary-light);
+  margin-right: 10px;
+  opacity: 0.5;
+}
+
+/* REVOLUTION SLIDER */
+/* @media only screen and (max-width: 768px) {
+  .rev_slider .tp-caption {
+    font-size: 15px !important;
+  }
+} */
+
+/* FOOTER */
+#Footer .widgets_wrapper {
+  padding-top: 3rem;
+  padding-bottom: 2em;
+}
+
+#Footer .widgets_wrapper .container .column {
+  margin-bottom: 1em;
+}
+
+#Footer ul.menu ul {
+  padding-left: 15px;
+}
+
+#Footer ul.menu .menu-item.current-menu-item a, #Footer ul.menu .menu-item.current-menu-ancestor a, #Footer ul.menu .menu-item.current-page-ancestor a {
+  border-bottom: none;
+}
+
+#Footer ul.menu .menu-item.current-menu-item > a, #Footer ul.menu .menu-item.current-menu-ancestor > a, #Footer ul.menu .menu-item.current-page-ancestor > a {
+  font-weight: bold;
+}
+
+#Footer .widget > h4 {
+  background: none;
+  text-align: center;
+  margin-top: 2em;
+}
